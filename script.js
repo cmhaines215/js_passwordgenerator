@@ -45,7 +45,14 @@ function generatePassword(){
     pwPrefs.push(allSpecials)
    };
 
-   var pwGen = "";
+   if(wantLowercase === false, wantUppercase === false, wantNumbers === false, wantSpecial === false){
+    alert("Try again, you must choose at least one type of character for your password.")
+    return;
+   }
+
+
+
+
 // random whole number generator (found this formula on W3schools Javascript Random page)
 
    function randomWholeInt(min, max){
@@ -55,13 +62,19 @@ function generatePassword(){
    function getRandomitem(item) {
     return item[randomWholeInt(0, item.length - 1)]
    };
+//    string variable for random characters to be directed to
+   var pwGen = "";
 
    for (var i = 0; i < howLong; i++){
     var randomArray = getRandomitem(pwPrefs);
     var randomValue = getRandomitem(randomArray);
+    pwGen += randomValue;
 
-    console.log(randomValue);
    }
+
+ 
+
+   return pwGen;
    
    
 }
