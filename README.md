@@ -14,3 +14,5 @@ There is a series of prompts that collects the user's preferences, and it genera
 https://github.com/cmhaines215/js_passwordgenerator
 
 ## Deployed Site
+
+https://cmhaines215.github.io/js_passwordgenerator/
